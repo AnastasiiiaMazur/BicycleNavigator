@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:textSize="24sp"
+        android:textColor="@color/text_red"
+        android:text="@string/your_ride_route"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_gravity="center"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true">
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Distance"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:background="@drawable/basic_button"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="120 km"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Approximate Time"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:background="@drawable/basic_button"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="2 h 30 min"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Route Difficulty"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/difficulty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="2dp"
+                android:background="@drawable/basic_button"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="2/5"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/startNavBtn"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="START NAVIGATION"
+        android:paddingVertical="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/saveRouteBtn"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="SAVE RIDE"
+        android:paddingVertical="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+</LinearLayout>

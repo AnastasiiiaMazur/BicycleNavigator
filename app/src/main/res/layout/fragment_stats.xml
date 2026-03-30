@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:textSize="24sp"
+        android:textColor="@color/text_red"
+        android:text="Ride Statistics"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/dayView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_outline_red"
+            android:paddingVertical="2dp"
+            android:textColor="@color/text_red"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="DAY"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/weekView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_outline_red"
+            android:paddingVertical="2dp"
+            android:layout_marginHorizontal="5dp"
+            android:textColor="@color/text_red"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="WEEK"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/monthView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_outline_red"
+            android:paddingVertical="2dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/text_red"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="MONTH"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/allView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_outline_red"
+            android:paddingVertical="2dp"
+            android:textColor="@color/text_red"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="ALL TIME"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="Total Distance: 200 km"
+        android:fontFamily="@font/montserrat_regular"/>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/idBarChart"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/totalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="Total Ride Time: 200 h"
+        android:fontFamily="@font/montserrat_regular"/>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/idBarChart2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/averageSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="Average Speed: 20 km/h"
+        android:fontFamily="@font/montserrat_regular"/>
+
+    <TextView
+        android:id="@+id/mostActiveDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="Most Active Days: Saturday, Sunday"
+        android:fontFamily="@font/montserrat_regular"/>
+
+    <TextView
+        android:id="@+id/longestRide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="Longest Ride: Saturday Trip with My Sis, 209 km"
+        android:fontFamily="@font/montserrat_regular"/>
+
+    <TextView
+        android:id="@+id/totalRides"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="Total Rides: 25 rides"
+        android:fontFamily="@font/montserrat_regular"/>
+
+</LinearLayout>

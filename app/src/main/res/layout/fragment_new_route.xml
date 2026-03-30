@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:textSize="24sp"
+        android:textColor="@color/text_red"
+        android:text="@string/plan_your_trip"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:paddingBottom="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="Distance"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <SeekBar
+                android:id="@+id/kmSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="17dp"
+                android:splitTrack="false"
+                android:progressDrawable="@drawable/seekbar_layer"
+                android:thumb="@drawable/seekbar_thumb"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="Start"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:id="@+id/startLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@drawable/basic_button">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/button_round"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Use My Location"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/startManualLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:background="@drawable/basic_button">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/button_round"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Choose Manually"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardUseCompatPadding="true">
+
+                <org.osmdroid.views.MapView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="Route Type"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:id="@+id/twistyRoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@drawable/basic_button">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/button_round"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Twisty"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scenicRoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:background="@drawable/basic_button">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/button_round"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Scenic"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/flatRoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:background="@drawable/basic_button">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/button_round"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Flat"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="Route Direction"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:id="@+id/clockwiseRoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@drawable/basic_button">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/button_round"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Clockwise"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/counterclockwiseRoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:background="@drawable/basic_button">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/button_round"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Counterclockwise"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/randomRoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:background="@drawable/basic_button">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/button_round"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Random"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/startRouteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="START ROUTE"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="25dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:textSize="24sp"
+        android:textColor="@color/text_red"
+        android:text="@string/manage_app_settings"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Specifications"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="Distance"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:paddingHorizontal="60dp"
+        android:background="@drawable/basic_button_small_corners"
+        android:text="km"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/mi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:textColor="@color/text_red"
+        android:background="@drawable/button_outline_black"
+        android:paddingHorizontal="60dp"
+        android:text="mi"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/deleteData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="CLEAR ALL RIDES"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="25dp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/rate"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/star_empty"
+            app:tint="@color/black"/>
+
+        <ImageView
+            android:id="@+id/privacy"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="39dp"
+            android:src="@drawable/ic_privacy"
+            app:tint="@color/black"/>
+
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_share"
+            app:tint="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Rate"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Privacy Policy"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Share"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

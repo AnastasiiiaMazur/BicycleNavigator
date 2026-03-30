@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/offlineContainer"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/retryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/white"
+        android:text="Retry"
+        android:background="@drawable/button"/>
+
+    <TextView
+        android:id="@+id/goToDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_demo"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
+
+    <ProgressBar
+        android:id="@+id/retryProgress"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"/>
+</LinearLayout>
